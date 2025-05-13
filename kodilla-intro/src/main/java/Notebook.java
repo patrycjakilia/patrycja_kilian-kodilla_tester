@@ -31,11 +31,11 @@ public class Notebook {
 
     public void checkPriceandYear(){
         if (this.year >= 2024 && this.price >= 3600){
-            System.out.println("Laptop o cenie powyżej 3600zł wyprodukowany po 2023 roku.");
+            System.out.println("Device manufactured after 2023 with a price above 3600 PLN");
         } else if (this.year > 2022 && this.year < 2024 && this.price < 3600 && this.price > 2500) {
-            System.out.println("Laptop w przedziale cenowym pomiędzy 2500 - 3600zł wyprodukowany w 2023 roku.");
+            System.out.println("The device was manufactured in 2023 in the price range between 2500 PLN and 3600 PLN.");
         } else {
-            System.out.println("Laptop wyrodukowany przed 2023 rokiem w cenie do 2500zł");
+            System.out.println("Device manufactured before 2023 at a price of up to 2500 PLN");
         }
     }
 

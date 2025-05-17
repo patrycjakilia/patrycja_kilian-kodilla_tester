@@ -10,7 +10,7 @@ class RandomNumbers {
     public void generateNumber(){
         int sum = 0;
 
-        for(int count = 0; sum < 500; count++){
+        for(int count = 0; sum < 5000; count++){
             int generateNumber = rand.nextInt(31);
             sum += generateNumber;
 

@@ -35,12 +35,12 @@ class RandomNumbers {
         return lowestNumber;
     }
 
-    public static void main(String[] args) {
+ /*   public static void main(String[] args) {
         RandomNumbers random = new RandomNumbers();
         random.generateNumber();
         System.out.println(random.getHighestNumber());
         System.out.println(random.getLowestNumber());
 
 
-    }
+    }*/
 }

@@ -16,7 +16,7 @@ public class User {
         return name;
     }
 
-    public static void main(String[] args) {
+ /*   public static void main(String[] args) {
         User[] users = new User[5];
         users[0] = new User(15, "Mark");
         users[1] = new User(20, "John");
@@ -35,7 +35,7 @@ public class User {
 
         }
     }
-
+*/
     public static double avgAge(User[] user){
         int sum = 0;
 

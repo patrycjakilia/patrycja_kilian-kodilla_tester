@@ -20,7 +20,6 @@ public class FirstClass {
         Notebook lightNotebook = new Notebook(100, 6000, 2020);
         Notebook modernNotebook = new Notebook (200, 8000, 2025);
 
-
     }
 */
 }

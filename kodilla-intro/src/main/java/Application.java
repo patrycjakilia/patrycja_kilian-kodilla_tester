@@ -19,7 +19,7 @@ public class Application {
         }
     }
 
- /*   public static void main(String[] args) {
+/*    public static void main(String[] args) {
         Application applications = new Application("Adam", 40.5,178);
         applications.checkAgeHeight();
 

@@ -4,13 +4,13 @@ class RandomNumbers {
 
     Random rand = new Random();
 
-    int highestNumber = 0;
-    int lowestNumber = 0;
+    int highestNumber = Integer.MIN_VALUE;
+    int lowestNumber = Integer.MAX_VALUE;
 
     public void generateNumber(){
         int sum = 0;
 
-        for(int i = 0; sum < 500; i++){
+        for(int count = 0; sum < 500; count++){
             int generateNumber = rand.nextInt(31);
             sum += generateNumber;
 
@@ -22,7 +22,7 @@ class RandomNumbers {
                 lowestNumber = generateNumber;
             }
 
-            System.out.println(i + ": number: " + generateNumber + ", sum: " + sum);
+            System.out.println(count + ": number: " + generateNumber + ", sum: " + sum);
         }
 
     }

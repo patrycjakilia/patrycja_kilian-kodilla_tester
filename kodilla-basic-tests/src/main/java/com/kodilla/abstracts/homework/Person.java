@@ -1,26 +1,18 @@
 package com.kodilla.abstracts.homework;
 
-public class Person {
-    private String firstName;
+public  class Person {
+    private String firstname;
     private int age;
-    private String job;
+    private Job job;
 
-
-
-    public String getFirstName(){
-        return firstName;
+    public Person(String firstname, int age, Job job){
+        this.firstname = firstname;
+        this.age = age;
+        this.job = job;
     }
 
-    public int getAge(){
-        return age;
-    }
-
-    public String getJob(){
-        return job;
-    }
-
-    public void getResponsibilites(Job job){
-        System.out.println("Obowiązki w pracy: " + job.ge);
+    public void returnResposibilities(){
+        System.out.println("Name: " + firstname + " age: " + age + " responsibilities: " + job.getResponsibilities() );
     }
 
 }

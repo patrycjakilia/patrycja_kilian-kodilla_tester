@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BankTestSuite {
 
     @Test
-    public void saldoOfCacheMachinesPositiveValues(){
+    public void saldoOfCashMachinesPositiveValues(){
         //given
         CashMachine cashMachine1 = new CashMachine();
         CashMachine cashMachine2 = new CashMachine();
@@ -25,7 +25,7 @@ public class BankTestSuite {
     }
 
     @Test
-    public void saldoOfCacheMachinesNegativeValues(){
+    public void saldoOfCashMachinesNegativeValues(){
         //given
         CashMachine cashMachine1 = new CashMachine();
         CashMachine cashMachine2 = new CashMachine();
@@ -43,7 +43,7 @@ public class BankTestSuite {
     }
 
     @Test
-    public void saldoOfCacheMachinesMixValues(){
+    public void saldoOfCashMachinesMixValues(){
         //given
         CashMachine cashMachine1 = new CashMachine();
         CashMachine cashMachine2 = new CashMachine();
@@ -60,7 +60,7 @@ public class BankTestSuite {
         assertEquals(-600, bank.saldoCashMachines());
     }
     @Test
-    public void saldoOfCacheMachinesZeroValues(){
+    public void saldoOfCashMachinesZeroValues(){
         //given
         CashMachine cashMachine1 = new CashMachine();
         CashMachine cashMachine2 = new CashMachine();
@@ -140,7 +140,7 @@ public class BankTestSuite {
         Bank bank = new Bank(machines);
 
         //then
-        assertEquals(0, bank.saldoCashMachines());
+        assertEquals(0, bank.countOfWithdrawal());
     }
 
     @Test

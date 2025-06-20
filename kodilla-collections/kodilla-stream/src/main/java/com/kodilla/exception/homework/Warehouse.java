@@ -16,7 +16,6 @@ public class Warehouse {
     public Order getOrder(String number){
         Optional<Order> order = orders.stream()
                 .filter(o -> o.getNumber().equals(number))
-                .findFirst();
 
     }
 }

@@ -11,4 +11,11 @@ public class Order {
     public String getNumber() {
         return number;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "number='" + number + '\'' +
+                '}';
+    }
 }

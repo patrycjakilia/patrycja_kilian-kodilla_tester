@@ -9,12 +9,10 @@ public class WarehouseApp {
         warehouse.addOrder(new Order("3"));
 
         try {
-            Order order1 = warehouse.getOrder("1");
-            System.out.println("Found order with number: " + order1.getNumber());
-
-
+            Order found = warehouse.getOrder("B002");
+            System.out.println("Znaleziono zamówienie o numerze: " + found.getNumber());
         } catch (OrderDoesntExistException e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Błąd: " + e.getMessage());
         }
     }
 }

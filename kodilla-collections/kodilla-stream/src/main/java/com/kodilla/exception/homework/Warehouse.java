@@ -13,9 +13,10 @@ public class Warehouse {
         return orders;
     }
 
-    public Order getOrder(String number){
-        Optional<Order> order = orders.stream()
+    public Order getOrder(String number) throws OrderDoesntExistException {
+        return orders.stream()
                 .filter(o -> o.getNumber().equals(number))
-
+                .findFirst()
+                .orElseThrow(() -> new OrderDoesntExistException("Order with number: " + number + "doesn't exist"));
     }
 }

@@ -4,13 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AirportRepository {
-    private Map<String,Boolean> getListOfAirports(){
-        Map<String, Boolean> airports = new HashMap<>();
+    private Map<String, Boolean> getListOfAirports(){
+        Map <String,Boolean> airports = new HashMap<>();
         airports.put("Miami", true);
-        airports.put("Milano", true);
+        airports.put("Malta", true);
+        airports.put("LasPalmas", false);
         airports.put("Warsaw", true);
-        airports.put("LasPalmas", true);
-
         return airports;
     }
 

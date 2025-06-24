@@ -37,9 +37,10 @@ class InvoiceTestSuite {
     @Test
     public void addItem(){
         int numberOfItems = invoice.getSize();
-
         assertEquals(2,numberOfItems);
     }
+
+
 
     @Test
     public void addItemCheckNameAndPrice() {

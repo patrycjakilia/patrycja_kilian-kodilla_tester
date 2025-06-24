@@ -1,22 +1,21 @@
 package com.kodilla.exception.homework;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.Map;
 
 public class Warehouse {
-    private List<Order> orders = new ArrayList<>();
+    private final List<Order> orders = new ArrayList<>();
 
-    public List<Order> addOrder(Order order){
+    public void addOrder(Order order) {
         orders.add(order);
-        return orders;
     }
 
     public Order getOrder(String number) throws OrderDoesntExistException {
         return orders.stream()
-                .filter(o -> o.getNumber().equals(number))
+                .filter(order -> order.getNumber().equals(number))
                 .findFirst()
-                .orElseThrow(() -> new OrderDoesntExistException("Order with number: " + number + "doesn't exist"));
+                .orElseThrow(() -> new OrderDoesntExistException());
     }
 }

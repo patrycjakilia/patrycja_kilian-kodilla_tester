@@ -1,17 +1,23 @@
 package com.kodilla.execution_model.homework;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 
 public class Shop {
-    Collection<Order> purchases = new HashSet<>();
+    List<Order> orders = new ArrayList<>();
 
-    public void addOrder(Order order){
-
+    public List<Order>  addOrder(Order order){
+        orders.add(order);
+        return orders;
     }
 
-    public void getOrderByDate(LocalDate firstDate, LocalDate secondDate){
+    public List<Order>  getOrderByDate(LocalDate firstDate, LocalDate secondDate){
+        return List<orders> orders
+                .stream()
+                .filter(order -> order.getDateOfPurchase().equals(firstDate)
 
     }
 

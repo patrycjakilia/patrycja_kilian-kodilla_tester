@@ -24,7 +24,7 @@ class ExternalApiRestAssuredTest {
     }
 
     @Test
-    void testUpdatePostShouldReturnStatus200AndUpdatedData() {
+    void testUpdatePutShouldReturnStatus200AndUpdatedData() {
         String requestBody = """
             {
                 "id": 1,

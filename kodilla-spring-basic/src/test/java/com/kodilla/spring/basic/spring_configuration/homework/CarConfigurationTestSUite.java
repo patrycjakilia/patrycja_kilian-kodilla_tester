@@ -13,12 +13,14 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class CarConfigurationTestSUite {
 
+    ApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.kodilla.spring");
+    CarConfiguration bean = applicationContext.getBean(CarConfiguration.class);
+
     @Test
     public void carTypeAtLato(){
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        CarConfiguration bean = applicationContext.getBean(CarConfiguration.class);
-        Car car = bean.carType("lato", LocalTime.of(22, 0));
-        Assertions.assertEquals("Cabrio", car);
+
+        Car car = bean.carType();
+        assertEquals("Cabrio", car.getCarType());
     }
 
 }

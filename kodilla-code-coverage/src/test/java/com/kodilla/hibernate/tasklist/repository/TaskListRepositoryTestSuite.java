@@ -21,15 +21,15 @@ class TaskListRepositoryTestSuite {
     @Test
     void testFindByListName(){
         //Given
-        TaskList taskList = new TaskList("ToDo", "Tasks to do");
+        TaskList taskList = new TaskList("ListName", "ListName Description");
         taskListRepository.save(taskList);
 
         //When
-        List<TaskList> result = taskListRepository.findByListName("ToDo");
+        List<TaskList> result = taskListRepository.findByListName("ListName");
 
         //Then
         Assertions.assertEquals(1, result.size());
-        Assertions.assertEquals("Tasks to do", result.get(0).getDescription());
+        Assertions.assertEquals("ListName Description", result.get(0).getDescription());
 
         //CleanUp
         taskListRepository.deleteAll();

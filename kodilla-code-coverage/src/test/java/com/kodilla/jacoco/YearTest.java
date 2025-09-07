@@ -1,7 +1,11 @@
 package com.kodilla.jacoco;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class YearTest {
 
@@ -9,28 +13,28 @@ public class YearTest {
     public void shouldBeLeapYearIfDivisibleBy400() {
         Year year = new Year(1600);
         boolean isLeapYear = year.isLeap();
-        Assert.assertTrue(isLeapYear);
+        assertTrue(isLeapYear);
     }
 
     @Test
     public void divisibleBy100Not400_shouldNotBeLeap() {
         Year year = new Year(1900);
         boolean isLeapYear = year.isLeap();
-        Assert.assertFalse(isLeapYear);
+        assertFalse(isLeapYear);
     }
 
     @Test
     public void divisibleBy4Not100_shouldBeLeap() {
         Year year = new Year(2012);
         boolean isLeapYear = year.isLeap();
-        Assert.assertTrue(isLeapYear);
+        assertTrue(isLeapYear);
     }
 
     @Test
     public void notDivisibleBy4_shouldNotBeLeap() {
         Year year = new Year(2019);
         boolean isLeapYear = year.isLeap();
-        Assert.assertFalse(isLeapYear);
+        assertFalse(isLeapYear);
     }
 
 }

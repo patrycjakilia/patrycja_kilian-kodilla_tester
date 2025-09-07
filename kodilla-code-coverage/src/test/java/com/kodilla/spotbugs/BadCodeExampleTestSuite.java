@@ -11,7 +11,6 @@ class BadCodeExampleTestSuite {
         BadCodeExample obj1 = new BadCodeExample();
         BadCodeExample obj2 = new BadCodeExample();
 
-        // ustawiamy typ przez refleksję, bo nie ma settera
         setType(obj1, "test");
         setType(obj2, "test");
 
@@ -59,7 +58,6 @@ class BadCodeExampleTestSuite {
         assertEquals(3.141592653589793, BadCodeExample.PI);
     }
 
-    // metoda pomocnicza do ustawiania pola private
     private void setType(BadCodeExample obj, String value) {
         try {
             var field = BadCodeExample.class.getDeclaredField("type");
